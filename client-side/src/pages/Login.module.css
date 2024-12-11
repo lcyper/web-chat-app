@@ -1,0 +1,31 @@
+.formStyle {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    border: solid 1px #f0f0f0;
+    border-radius: 15px;
+    row-gap: 1em;
+}
+
+.formStyle>label {
+    text-align: start;
+}
+
+.formStyle>input {
+    border-radius: 8px;
+}
+
+.checkbox {
+    display: flex;
+    column-gap: 0.5em;
+    text-decoration: underline;
+}
+
+
+.checkbox>input[type="checkbox"]:checked {
+    accent-color: white;
+}
+
+.btnStyle:enabled {
+    background-color: #13e62a;
+}
