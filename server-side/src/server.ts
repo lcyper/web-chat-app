@@ -50,11 +50,12 @@ io.on('connection', (socket) => {
       socket.emit('previous-messages', messages);
       
       io.emit('user-joined', { id: socket.id, name: nickName });
+      console.log('user-joined ',nickName)
     });
   
     // Handle new messages
     socket.on('send-message', async (content: string) => {
-      console.log('recibed: ','send-message')
+      console.log('recibed: ','send-message: ',content)
       const messageData = {
         content,
         sender: socket.data.nickName,
@@ -74,6 +75,7 @@ io.on('connection', (socket) => {
       socket.data.nickName = nickName;
             
       io.emit('user-leave', { id: socket.id, name: nickName });
+      console.log('user-leave ',nickName)
     });
   
     // Handle disconnection
