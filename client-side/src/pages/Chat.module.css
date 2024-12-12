@@ -61,7 +61,6 @@
 .main {
     flex: 1;
     overflow-y: auto;
-    padding: 0 1em;
     background-color: #3a3a3a;
 }
 
@@ -70,7 +69,7 @@
     flex-direction: column;
     justify-content: flex-end;
     margin: 0;
-
+    padding: 0.5em 1em;
 }
 
 .main ul li {
@@ -79,12 +78,13 @@
     background-color: #656565;
     margin: 0.2em 0;
     border-radius: 8px;
+    padding: 0 0.4em;
 }
 
 .sender {
     margin: 0;
     color: aqua;
-    padding: 0 0.3em;
+
 }
 
 .footer svg {
