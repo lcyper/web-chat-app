@@ -31,7 +31,7 @@ const Chat: React.FC = () => {
     }
 
     // Connect to Socket.IO server
-    const socketInstance = io('http://localhost:4000')
+    const socketInstance = io('https://web-chat-app-933825269774.southamerica-east1.run.app')
     setSocket(socketInstance)
 
     // Join the chat
@@ -104,7 +104,7 @@ const Chat: React.FC = () => {
                 'textAlign': isMyMessage ? 'right' : 'left',
                 'alignSelf': isMyMessage ? 'end' : 'start',
                 'borderRadius': `${isMyMessage ? '8px' : 0} 8px ${isMyMessage ? 0 : '8px'} 8px`,
-                'padding': `0.1em ${isMyMessage ? '0.4em' : '0.2em'}`,
+
               }}>
                 {(!isMyMessage && !lastChatWasSameNickName) && <p className={styles.sender}>{chat.sender}</p>}
                 {chat.content}
